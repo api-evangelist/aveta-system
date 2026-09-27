@@ -1,23 +1,87 @@
 aid: aveta-system
+
 name: Aveta System
-description: 'Aveta System is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/696fddc24f2e82c416e23640/697ba15528499b3ced513224_hero-opg.png
+
+description: Avetta (formerly Aveta System) provides contractor risk management and supply chain safety solutions, helping companies ensure compliance,
+  reduce workplace incidents, and manage supplier qualifications. Their platform offers tools for prequalification, safety audits, worker management,
+  and cyber risk assessment, serving a global client base across multiple industries.
+
 url: https://raw.githubusercontent.com/api-evangelist/aveta-system/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Risk Management
+- Supply Chain
+- Safety
+- Compliance
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: SecurityTxt
+  url: well-known/aveta-system-status-security.txt
+- type: WellKnown
+  url: well-known/aveta-system-well-known.yml
+- type: Hosts
+  url: hosts/aveta-system-hosts.yml
+- type: Vendors
+  url: vendors/aveta-system-vendors.yml
+- type: StatusPage
+  url: https://status.avetta.com/
+- type: PrivacyPolicy
+  url: https://www.avetta.com/legal/privacy-policy
+- type: Pricing
+  url: https://www.avetta.com/plans
+- type: Leadership
+  url: https://www.avetta.com/leadership
+- type: Blog
+  url: https://www.avetta.com/blog
+- type: Documentation
+  url: https://docs.api.avetta.com/
+- type: GitHubOrganization
+  url: https://github.com/avetta
+- type: DomainSecurity
+  url: security/aveta-system-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.avetta.com
+
+apis:
+- name: Avetta API
+  description: Developer portal for Avetta API providing contractor risk management integrations.
+  humanURL: https://docs.api.avetta.com/
+  baseURL: null
+  aid: aveta-system:avetta-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Docs at https://docs.api.avetta.com/ are a React single-page app with no machine‑readable spec.
+  evidence:
+  - url: https://docs.api.avetta.com/
+    status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
